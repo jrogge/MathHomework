@@ -1,4 +1,4 @@
-# MathHomework
+# Math Homework
 A latex template (not mine, found publicly on overleaf.com) and bash script I wrote to make starting a new homework assignment ever so slightly simpler
 
 To use, firstly change the info in the template. Then run
