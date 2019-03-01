@@ -3,7 +3,7 @@ A latex template (not mine, found publicly on overleaf.com) and bash script I wr
 
 To use, firstly change the info in the template. Then run
 ```
-./init N
+./init.sh N
 ```
 
 This will generate a folder called *HW**N*** with *hw**N**.tex* and a makefile that uses xelatex to compile this tex file.
