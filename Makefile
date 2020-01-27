@@ -1,2 +1,4 @@
+# -interaction nonstopmode makes error not halt in shell
+# -file-line-error shows the location in the tex file of the error
 all :
-	xelatex hwNUM.tex
+	xelatex -interaction nonstopmode -file-line-error hw<NUM>.tex
