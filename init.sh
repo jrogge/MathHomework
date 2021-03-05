@@ -1,11 +1,16 @@
-num=$1
+numFile="HWNum.txt"
+typeset num=$(cat "$numFile")
+#echo file contents
+#cat "$numFile"
+#echo "===="
 numStr="<NUM>"
 
 # make folder, copy desired contents
-mkdir "HW$1"
-cp template.tex "HW$1"/"hw$1".tex
-cp Makefile "HW$1"/Makefile
+mkdir "HW$num"
+cp template.tex "HW$num"/"HW$num".tex
+cp Makefile "HW$num"/Makefile
 
-# insert correct number
-perl -pi -e "s/$numStr/$num/g" "HW$1"/"hw$1".tex
-perl -pi -e "s/$numStr/$num/g" "HW$1"/Makefile
+# insert correct number and date
+perl -pi -e "s/$numStr/$num/g" "HW$num"/"HW$num".tex
+perl -pi -e "s/$numStr/$num/g" "HW$num"/Makefile
+echo $((num + 1)) > $numFile

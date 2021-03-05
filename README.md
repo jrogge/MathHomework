@@ -3,7 +3,11 @@ A latex template (not mine, found publicly on overleaf.com) and bash script I wr
 
 To use, firstly change the info in the template. Then run
 ```
-./init.sh N
+./init.sh
 ```
 
-This will generate a folder called *HW**N*** with *hw**N**.tex* and a makefile that uses xelatex to compile this tex file.
+This will generate a folder called *HW**N*** with *hw**N**.tex* where N starts
+at 1 and is increased every time you run init. The script also creates a
+makefile that uses xelatex to compile this tex file.
+
+To change the number, edit HWNum.txt

@@ -13,7 +13,7 @@ graphicx, environ, parskip}
 \newcommand{\N}{\mathbb{N}}
 \newtheoremstyle{problem}% name of the style to be used
 {3pt}% measure of space to leave above the theorem. E.g.: 3pt
-{3pt}% measure of space to leave below the theorem. E.g.: 3pt
+{16pt}% measure of space to leave below the theorem. E.g.: 3pt
 {}% name of font to use in the body of the theorem
 {}% measure of space to indent
 {\normalfont\bfseries}% name of head font
@@ -21,7 +21,11 @@ graphicx, environ, parskip}
 {0.5em}% space after theorem head; " " = normal interword space
 {}% Manually specify head
 \theoremstyle{problem}
-\newtheorem{prob}{Problem}
+%\newtheorem{prob}{Problem}
+\newtheorem{innerprob}{Problem}
+\newenvironment{prob}[1]
+  {\renewcommand\theinnerprob{#1}\innerprob}
+  {\endinnerprob}
 
 \newtheoremstyle{pf}% name of the style to be used
 {3pt}% measure of space to leave above the theorem. E.g.: 3pt
@@ -37,8 +41,8 @@ graphicx, environ, parskip}
 \newtheorem*{pf}{Proof}
 
 
-\lhead{Joseph Rogge \quad NetID: jwrogge2}
-\rhead{Homework <NUM> \quad Math 500}
+\lhead{NAME \quad ID}
+\rhead{Homework <NUM> \quad COURSE NUM}
 
 \begin{document}
 
